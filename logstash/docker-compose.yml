@@ -18,6 +18,7 @@ services:
       - logstashdata01:/usr/share/logstash/data
       - ./certs:/usr/share/logstash/certs
       - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf:ro
+      - /var/log/nginx:/var/log/nginx
     environment:
       - NODE_NAME="logstash"
       - xpack.monitoring.enabled=false
